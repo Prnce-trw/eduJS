@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myItem">Hello</div>
+    <button type="button" id="deleteButton">Delete</button>
+
+    <br>
+    <hr>
+    <h5>source code</h5>
+    <textarea name="" id="" cols="30" rows="10" style="width: 100%; height: 300px; background-color: #f1f1f1;">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myItem">Hello</div>
+    <button type="button" id="deleteButton">Delete</button>
+    
+    <script>
+        var deleteButton= document.getElementById('deleteButton');
+        deleteButton.addEventListener('click', function() {
+            alert('Click delete button!!!');
+            let myDiv = document.getElementById('myItem');
+            myDiv.remove();
+        });
+    </script>
+</body>
+</html>
+
+    </textarea>
+
+    <script>
+        var deleteButton= document.getElementById('deleteButton');
+        deleteButton.addEventListener('click', function() {
+            alert('Click delete button!!!');
+            let myDiv = document.getElementById('myItem');
+            myDiv.remove();
+        });
+    </script>
+</body>
+</html>
