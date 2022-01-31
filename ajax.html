@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h3><span>A</span>synchronous <span>J</span>avascript <span>A</span>nd <span>X</span>ml : <span>AJAX</span></h3>
+    <button type="button" onclick="demodata()">Get Date Now</button>
+    <div id="result"></div>
+    <br><hr>
+    <h5>ajax source code</h5>
+    <textarea name="" id="" cols="30" rows="10" style="width: 100%; height: 300px; background-color: #f1f1f1;">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <style>
+                span {
+                    color: red;
+                }
+            </style>
+        </head>
+        <body>
+            <h3><span>A</span>synchronous <span>J</span>avascript <span>A</span>nd <span>X</span>ml : <span>AJAX</span></h3>
+            <button type="button" onclick="demodata()">Get Date Now</button>
+            <div id="result"></div>
+            <script>
+                function demodata() {
+                    var request = new XMLHttpRequest();
+                    // hethod
+                    // - GET
+                    // - POST
+                    request.open("GET", "helper.php");
+                    request.onreadystatechange = function() {
+                        // JS State
+                        // 0 ขอไม่ได้เริ่มต้น
+                        // 1: การเชื่อมต่อเซิร์ฟเวอร์ที่จัดตั้งขึ้น
+                        // 2: ได้รับการร้องขอ
+                        // 3: การประมวลผลคำขอ
+                        // 4: ขอสำเร็จรูปและการตอบสนองพร้อม
+        
+                        // JS Status
+                        // 200: "OK"
+                        // ไม่พบหน้า: 404
+                        if(this.readyState === 4 && this.status === 200) {
+                            document.getElementById("result").innerHTML = this.responseText;
+                        }
+                    };
+                    request.send();
+                }
+            </script>
+        </body>
+        </html>
+    </textarea>
+    <br>
+    <h5>helper.php source code</h5>
+    <textarea name="" id="" cols="30" rows="10" style="width: 100%; height: 200px; background-color: #f1f1f1;">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <?php echo "Today is " . date("d/m/Y") . "<br>"; ?>
+        </body>
+        </html>
+    </textarea>
+    <script>
+        function demodata() {
+            var request = new XMLHttpRequest();
+            request.open("GET", "helper.php");
+            request.onreadystatechange = function() {
+                // JS State
+                // 0 ขอไม่ได้เริ่มต้น
+                // 1: การเชื่อมต่อเซิร์ฟเวอร์ที่จัดตั้งขึ้น
+                // 2: ได้รับการร้องขอ
+                // 3: การประมวลผลคำขอ
+                // 4: ขอสำเร็จรูปและการตอบสนองพร้อม
+
+                // JS Status
+                // 200: "OK"
+                // ไม่พบหน้า: 404
+                if(this.readyState === 4 && this.status === 200) {
+                    document.getElementById("result").innerHTML = this.responseText;
+                }
+            };
+            request.send();
+        }
+    </script>
+</body>
+</html>

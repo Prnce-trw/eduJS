@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Int + Int</h1>
+    <div id="resultint"></div>
+    <br><hr>
+    <h1>Int + str</h1>
+    <div id="resultintstr"></div>
+    <br><hr>
+    <h1>str + str</h1>
+    <div id="resultstr"></div>
+    <br><hr>
+    <h5>source code</h5>
+    <textarea name="" id="" cols="30" rows="10" style="width: 100%; height: 300px; background-color: #f1f1f1;">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <h1>Int + Int</h1>
+            <div id="resultint"></div>
+            <br><hr>
+            <h1>Int + str</h1>
+            <div id="resultintstr"></div>
+            <br><hr>
+            <h1>str + str</h1>
+            <div id="resultstr"></div>
+            <br><hr>
+            <h5>source code</h5>
+            <script>
+                var mynumber = 10;
+
+                document.getElementById("resultint").innerHTML = mynumber + 5;
+                document.getElementById("resultintstr").innerHTML = "mynumber" + 5 + 7 + 6;
+                document.getElementById("resultstr").innerHTML = "mynumber" + "5";
+            </script>
+        </body>
+        </html>
+    </textarea>
+
+    <script>
+        var mynumber = 10;
+        
+        document.getElementById("resultint").innerHTML = mynumber + 5;
+        document.getElementById("resultintstr").innerHTML = "mynumber" + 5 + 7 + 6;
+        document.getElementById("resultstr").innerHTML = "mynumber" + "5";
+    </script>
+</body>
+</html>
