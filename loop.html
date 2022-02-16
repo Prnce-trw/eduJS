@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>For Loop </h1>
+    <div id="myName"></div>
+    <p id="demo"></p>
+
+    <script>
+        const delivery = ["Grab", "Line Man", "Food Panda", "Shoppee", "Robinhood"];
+
+        let text = "";
+        for (let i = 0; i < delivery.length; i++) {
+            text += delivery[i] + "<br>";
+        }
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+    <hr>
+
+    <h3>JavaScript For Loop</h3>
+    <h5>source code</h5>
+
+    <textarea name="" id="" cols="30" rows="10" style="width: 100%; height: 300px; background-color: #f1f1f1;">
+    <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <h2>JavaScript For Loop</h2>
+            <p id="demo"></p>
+            <script>
+                const delivery = [ "Grab", "Line Man", "Food Panda", "Shoppee", "Robinhood"];
+                let text = "";
+                for (let i = 0; i < delivery.length; i++) {
+                    text += delivery[i] + "<br>"; 
+                }
+                document.getElementById("demo").innerHTML = text;
+            </script>
+        </body>
+        </html>
+    </textarea>
+</body>
+</html>
